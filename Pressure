@@ -1,6 +1,6 @@
 V = pcall(function()
     local ProximityPrompt = Instance.new("ProximityPrompt")
-    fireproximityprompt(ProximityPrompt, 70)
+    fireproximityprompt(ProximityPrompt)
 end)
 
 if V then
