@@ -1,10 +1,20 @@
-V = pcall(function()
+local PC = not game:GetService("UserInputService").TouchEnabled
+
+local V = pcall(function()
     local ProximityPrompt = Instance.new("ProximityPrompt")
     fireproximityprompt(ProximityPrompt)
 end)
 
-if V then
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/SquadHat/Pressure/main/V/VV'))() -- WIP
+if PC then
+    if NewUI then
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/SquadHat/Pressure/main/V/Mobile'))()
+    else
+        if V then
+            loadstring(game:HttpGet('https://raw.githubusercontent.com/SquadHat/Pressure/main/V/VV'))() -- WIP
+        else
+            loadstring(game:HttpGet('https://raw.githubusercontent.com/SquadHat/Pressure/main/V/VV'))()
+        end
+    end
 else
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/SquadHat/Pressure/main/V/VV'))()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/SquadHat/Pressure/main/V/Mobile'))()
 end
