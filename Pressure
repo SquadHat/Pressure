@@ -6,7 +6,7 @@ local V = pcall(function()
 end)
 
 if PC then
-    if NewUI then
+    if Fluent then
         loadstring(game:HttpGet('https://raw.githubusercontent.com/SquadHat/Pressure/main/V/Mobile'))()
     else
         if V then
