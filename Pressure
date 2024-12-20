@@ -1,3 +1,17 @@
+local patched = true
+if patched then
+    local function notify(title, text, duration)
+        game.StarterGui:SetCore("SendNotification", {Title = title, Text = text, Duration = duration})
+    end
+    notify("PATCHED!", "Some features are detected. \n\nContinuing to use it may put your account at risk of permanent ban from the game", 5)
+    task.wait(4)
+    setclipboard("https://github.com/SquadHat/Pressure/tree/main/V")
+    notify("Note", "If you still insist on using it, you can find it on my github, link is in your clipboard\n(use 'VV' version)", 5)
+    task.wait(4)
+    notify("Conclusion", "I'll probably fix this script someday", 3)
+    return
+end
+--[[
 local PC = not game:GetService("UserInputService").TouchEnabled
 
 local V = pcall(function()
@@ -18,3 +32,4 @@ if PC then
 else
     loadstring(game:HttpGet('https://raw.githubusercontent.com/SquadHat/Pressure/main/V/Mobile'))()
 end
+--]]
